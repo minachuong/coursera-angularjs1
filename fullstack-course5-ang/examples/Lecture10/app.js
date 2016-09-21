@@ -4,7 +4,9 @@
 angular.module('DIApp', [])
 .controller('DIController', DIController);
 
+// minification looks for $inject so that services are included in minification
 DIController.$inject = ['$scope', '$filter'];
+
 function DIController($scope, $filter) {
   $scope.name = "Yaakov";
 
